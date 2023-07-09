@@ -29,7 +29,7 @@ public class 老鼠和奶酪 {
                 int t = pq.poll();
                 ans += t;
             }
-            return ans;cewd
+            return ans;
         }
     }
 //leetcode submit region end(Prohibit modification and deletion)
