@@ -12,7 +12,7 @@ import java.util.Deque;
 public class 最近的请求次数 {
     public static void main(String[] args) {
         //测试代码
-        Solution solution = new 最近的请求次数().new Solution();
+        RecentCounter solution = new 最近的请求次数().new RecentCounter();
     }
 
     //leetcode submit region begin(Prohibit modification and deletion)
