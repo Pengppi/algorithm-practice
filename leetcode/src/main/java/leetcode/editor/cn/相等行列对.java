@@ -6,6 +6,9 @@
  */
 package leetcode.editor.cn;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class 相等行列对 {
     public static void main(String[] args) {
         //测试代码
