@@ -13,6 +13,15 @@ public class 反转链表 {
     }
     //leetcode submit region begin(Prohibit modification and deletion)
 
+    public class ListNode {
+        int val;
+        ListNode next;
+
+        ListNode(int x) {
+            val = x;
+        }
+    }
+
     /**
      * Definition for singly-linked list.
      * public class ListNode {
