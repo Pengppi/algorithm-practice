@@ -6,7 +6,6 @@
  */
 package leetcode.editor.cn;
 
-import javax.swing.tree.TreeNode;
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Deque;
@@ -17,6 +16,17 @@ public class 从上到下打印二叉树II {
         //测试代码
         Solution solution = new 从上到下打印二叉树II().new Solution();
     }
+
+    public class TreeNode {
+        int val;
+        TreeNode left;
+        TreeNode right;
+
+        TreeNode(int x) {
+            val = x;
+        }
+    }
+
     //leetcode submit region begin(Prohibit modification and deletion)
 
     /**

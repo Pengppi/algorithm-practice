@@ -12,6 +12,25 @@ public class 二叉搜索树与双向链表 {
         Solution solution = new 二叉搜索树与双向链表().new Solution();
     }
 
+    class Node {
+        public int val;
+        public Node left;
+        public Node right;
+
+        public Node() {
+        }
+
+        public Node(int _val) {
+            val = _val;
+        }
+
+        public Node(int _val, Node _left, Node _right) {
+            val = _val;
+            left = _left;
+            right = _right;
+        }
+    }
+
     //leetcode submit region begin(Prohibit modification and deletion)
 /*
 // Definition for a Node.

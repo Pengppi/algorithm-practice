@@ -5,6 +5,9 @@
  * @Date: 2023-04-23 00:35:05
  */
 package leetcode.editor.cn;
+
+import java.util.Arrays;
+
 public class 填充书架{
 public static void main(String[] args) {
         //测试代码

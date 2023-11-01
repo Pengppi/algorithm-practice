@@ -7,6 +7,7 @@
 package leetcode.editor.cn;
 
 import java.util.HashSet;
+import java.util.Set;
 
 public class 检查相同字母间的距离 {
     public static void main(String[] args) {

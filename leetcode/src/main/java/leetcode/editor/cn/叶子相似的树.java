@@ -1,15 +1,15 @@
 /**
- * @Title: 1026.节点与其祖先之间的最大差值
- * @TitleSlug: maximumDifferenceBetweenNodeAndAncestor
+ * @Title: 872.叶子相似的树
+ * @TitleSlug: leafSimilarTrees
  * @Author: Neo
- * @Date: 2023-04-18 13:47:09
+ * @Date: 2023-11-01 16:27:25
  */
 package leetcode.editor.cn;
 
-public class 节点与其祖先之间的最大差值 {
+public class 叶子相似的树 {
     public static void main(String[] args) {
         //测试代码
-        Solution solution = new 节点与其祖先之间的最大差值().new Solution();
+        Solution solution = new 叶子相似的树().new Solution();
     }
 
     public class TreeNode {
@@ -30,7 +30,6 @@ public class 节点与其祖先之间的最大差值 {
             this.right = right;
         }
     }
-
     //leetcode submit region begin(Prohibit modification and deletion)
 
     /**
@@ -49,27 +48,27 @@ public class 节点与其祖先之间的最大差值 {
      * }
      */
     class Solution {
-
-        private int ans = 0;
-
-        public int maxAncestorDiff(TreeNode root) {
-            dfs(root, root.val, root.val);
-            return ans;
+        public boolean leafSimilar(TreeNode root1, TreeNode root2) {
+            StringBuilder sb1 = new StringBuilder();
+            StringBuilder sb2 = new StringBuilder();
+            dfs(root1, sb1);
+            dfs(root2, sb2);
+            return sb1.toString().equals(sb2.toString());
         }
 
-        private void dfs(TreeNode root, int mn, int mx) {
+        private void dfs(TreeNode root, StringBuilder sb) {
             if (root == null) {
                 return;
             }
-            ans = Math.max(ans, Math.max(root.val - mn, mx - root.val));
-            mn = Math.min(root.val, mn);
-            mx = Math.max(root.val, mx);
-            dfs(root.left, mn, mx);
-            dfs(root.right, mn, mx);
-
+            if (root.left == null && root.right == null) {
+                sb.append(root.val).append("-");
+            } else {
+                dfs(root.left, sb);
+                dfs(root.right, sb);
+            }
         }
     }
-    //leetcode submit region end(Prohibit modification and deletion)
+//leetcode submit region end(Prohibit modification and deletion)
 
 }
         

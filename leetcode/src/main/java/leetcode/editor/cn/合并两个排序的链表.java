@@ -6,13 +6,21 @@
  */
 package leetcode.editor.cn;
 
-import javax.swing.tree.TreeNode;
-
 public class 合并两个排序的链表 {
     public static void main(String[] args) {
         //测试代码
         Solution solution = new 合并两个排序的链表().new Solution();
     }
+
+    public class ListNode {
+        int val;
+        ListNode next;
+
+        ListNode(int x) {
+            val = x;
+        }
+    }
+
     //leetcode submit region begin(Prohibit modification and deletion)
 
     /**

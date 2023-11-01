@@ -7,6 +7,7 @@
 package leetcode.editor.cn;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class 大样本统计 {
     public static void main(String[] args) {

@@ -7,11 +7,13 @@
 package leetcode.editor.cn;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class 字符流 {
     public static void main(String[] args) {
         //测试代码
-        Solution solution = new 字符流().new Solution();
+        StreamChecker solution = new 字符流().new StreamChecker(null);
     }
 
     //leetcode submit region begin(Prohibit modification and deletion)

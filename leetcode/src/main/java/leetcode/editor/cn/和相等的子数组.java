@@ -6,6 +6,9 @@
  */
 package leetcode.editor.cn;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class 和相等的子数组 {
     public static void main(String[] args) {
         //测试代码

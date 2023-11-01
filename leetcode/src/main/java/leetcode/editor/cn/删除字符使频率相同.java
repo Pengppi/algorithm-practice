@@ -6,10 +6,8 @@
  */
 package leetcode.editor.cn;
 
-import java.util.Arrays;
-import java.util.HashMap;
 import java.util.HashSet;
-import java.util.Map;
+import java.util.Set;
 
 public class 删除字符使频率相同 {
     public static void main(String[] args) {

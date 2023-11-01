@@ -12,7 +12,7 @@ import java.util.PriorityQueue;
 public class 数据流中的中位数 {
     public static void main(String[] args) {
         //测试代码
-        Solution solution = new 数据流中的中位数().new Solution();
+//        Solution solution = new 数据流中的中位数().new Solution();
     }
 
     //leetcode submit region begin(Prohibit modification and deletion)

@@ -7,6 +7,7 @@
 package leetcode.editor.cn;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class 和为s的连续正数序列 {
     public static void main(String[] args) {

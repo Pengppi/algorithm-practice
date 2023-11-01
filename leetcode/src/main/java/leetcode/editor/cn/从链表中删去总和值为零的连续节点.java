@@ -11,6 +11,24 @@ public class 从链表中删去总和值为零的连续节点 {
         //测试代码
         Solution solution = new 从链表中删去总和值为零的连续节点().new Solution();
     }
+
+    public class ListNode {
+        int val;
+        ListNode next;
+
+        ListNode() {
+        }
+
+        ListNode(int val) {
+            this.val = val;
+        }
+
+        ListNode(int val, ListNode next) {
+            this.val = val;
+            this.next = next;
+        }
+    }
+
     //leetcode submit region begin(Prohibit modification and deletion)
 
     /**

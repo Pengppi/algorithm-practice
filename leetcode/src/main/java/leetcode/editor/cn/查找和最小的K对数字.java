@@ -8,6 +8,7 @@ package leetcode.editor.cn;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import java.util.PriorityQueue;
 
 public class 查找和最小的K对数字 {

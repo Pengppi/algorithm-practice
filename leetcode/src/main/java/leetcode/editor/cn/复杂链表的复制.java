@@ -7,12 +7,26 @@
 package leetcode.editor.cn;
 
 import java.util.HashMap;
+import java.util.Map;
 
 public class 复杂链表的复制 {
     public static void main(String[] args) {
         //测试代码
         Solution solution = new 复杂链表的复制().new Solution();
     }
+
+    class Node {
+        int val;
+        Node next;
+        Node random;
+
+        public Node(int val) {
+            this.val = val;
+            this.next = null;
+            this.random = null;
+        }
+    }
+
 
     //leetcode submit region begin(Prohibit modification and deletion)
 /*

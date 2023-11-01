@@ -6,6 +6,7 @@
  */
 package leetcode.editor.cn;
 
+import java.util.Map;
 import java.util.TreeMap;
 
 public class 按身高排序 {
@@ -17,7 +18,7 @@ public class 按身高排序 {
     //leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
         public String[] sortPeople(String[] names, int[] heights) {
-            Map<Integer, String> map = new TreeMap<>((a,b)->(b.compareTo(a)));
+            Map<Integer, String> map = new TreeMap<>((a, b)->(b.compareTo(a)));
             for (int i = 0; i < names.length; i++) {
                 map.put(heights[i], names[i]);
             }

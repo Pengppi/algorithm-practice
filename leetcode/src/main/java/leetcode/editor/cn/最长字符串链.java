@@ -6,9 +6,8 @@
  */
 package leetcode.editor.cn;
 
-import javafx.concurrent.Worker;
-
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.Map;
 
 public class 最长字符串链 {

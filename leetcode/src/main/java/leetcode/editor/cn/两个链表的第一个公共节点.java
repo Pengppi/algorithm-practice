@@ -11,6 +11,16 @@ public class 两个链表的第一个公共节点 {
         //测试代码
         Solution solution = new 两个链表的第一个公共节点().new Solution();
     }
+
+    public class ListNode {
+        int val;
+        ListNode next;
+
+        ListNode(int x) {
+            val = x;
+            next = null;
+        }
+    }
     //leetcode submit region begin(Prohibit modification and deletion)
 
     /**

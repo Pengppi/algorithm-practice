@@ -8,6 +8,7 @@ package leetcode.editor.cn;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class 重构2行二进制矩阵 {
     public static void main(String[] args) {

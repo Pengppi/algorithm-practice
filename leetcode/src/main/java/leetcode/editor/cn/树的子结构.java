@@ -6,13 +6,22 @@
  */
 package leetcode.editor.cn;
 
-import javax.swing.tree.TreeNode;
-
 public class 树的子结构 {
     public static void main(String[] args) {
         //测试代码
         Solution solution = new 树的子结构().new Solution();
     }
+
+    public class TreeNode {
+        int val;
+        TreeNode left;
+        TreeNode right;
+
+        TreeNode(int x) {
+            val = x;
+        }
+    }
+
     //leetcode submit region begin(Prohibit modification and deletion)
 
     /**
@@ -28,7 +37,7 @@ public class 树的子结构 {
 
 
         public boolean isSubStructure(TreeNode A, TreeNode B) {
-            return (A != null && B != null) && (recur(A, B)|| isSubStructure(A.left, B) || isSubStructure(A.right, B));
+            return (A != null && B != null) && (recur(A, B) || isSubStructure(A.left, B) || isSubStructure(A.right, B));
 
         }
 

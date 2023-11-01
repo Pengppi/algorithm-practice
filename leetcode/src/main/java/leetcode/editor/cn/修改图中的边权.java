@@ -7,6 +7,7 @@
 package leetcode.editor.cn;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class 修改图中的边权 {
     public static void main(String[] args) {

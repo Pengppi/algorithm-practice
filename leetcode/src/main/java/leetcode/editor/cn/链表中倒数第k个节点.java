@@ -6,14 +6,24 @@
  */
 package leetcode.editor.cn;
 
-import java.sql.Array;
 import java.util.ArrayDeque;
+import java.util.Deque;
 
 public class 链表中倒数第k个节点 {
     public static void main(String[] args) {
         //测试代码
         Solution solution = new 链表中倒数第k个节点().new Solution();
     }
+
+    public class ListNode {
+        int val;
+        ListNode next;
+
+        ListNode(int x) {
+            val = x;
+        }
+    }
+
     //leetcode submit region begin(Prohibit modification and deletion)
 
     /**

@@ -1,15 +1,15 @@
 /**
- * @Title: 1026.节点与其祖先之间的最大差值
- * @TitleSlug: maximumDifferenceBetweenNodeAndAncestor
+ * @Title: 104.二叉树的最大深度
+ * @TitleSlug: maximumDepthOfBinaryTree
  * @Author: Neo
- * @Date: 2023-04-18 13:47:09
+ * @Date: 2023-11-01 16:24:50
  */
 package leetcode.editor.cn;
 
-public class 节点与其祖先之间的最大差值 {
+public class 二叉树的最大深度 {
     public static void main(String[] args) {
         //测试代码
-        Solution solution = new 节点与其祖先之间的最大差值().new Solution();
+        Solution solution = new 二叉树的最大深度().new Solution();
     }
 
     public class TreeNode {
@@ -30,7 +30,6 @@ public class 节点与其祖先之间的最大差值 {
             this.right = right;
         }
     }
-
     //leetcode submit region begin(Prohibit modification and deletion)
 
     /**
@@ -49,27 +48,15 @@ public class 节点与其祖先之间的最大差值 {
      * }
      */
     class Solution {
-
-        private int ans = 0;
-
-        public int maxAncestorDiff(TreeNode root) {
-            dfs(root, root.val, root.val);
-            return ans;
-        }
-
-        private void dfs(TreeNode root, int mn, int mx) {
+        public int maxDepth(TreeNode root) {
             if (root == null) {
-                return;
+                return 0;
+            } else {
+                return 1 + Math.max(maxDepth(root.left), maxDepth(root.right));
             }
-            ans = Math.max(ans, Math.max(root.val - mn, mx - root.val));
-            mn = Math.min(root.val, mn);
-            mx = Math.max(root.val, mx);
-            dfs(root.left, mn, mx);
-            dfs(root.right, mn, mx);
-
         }
     }
-    //leetcode submit region end(Prohibit modification and deletion)
+//leetcode submit region end(Prohibit modification and deletion)
 
 }
         

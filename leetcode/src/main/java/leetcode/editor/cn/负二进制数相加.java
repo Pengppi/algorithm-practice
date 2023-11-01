@@ -8,7 +8,7 @@ package leetcode.editor.cn;
 
 
 import java.util.ArrayList;
-import java.util.LinkedList;
+import java.util.List;
 
 public class 负二进制数相加 {
     public static void main(String[] args) {

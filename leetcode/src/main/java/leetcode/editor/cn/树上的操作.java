@@ -14,7 +14,7 @@ import java.util.Map;
 public class 树上的操作 {
     public static void main(String[] args) {
         //测试代码
-        Solution solution = new 树上的操作().new Solution();
+//        Solution solution = new 树上的操作().new Solution();
     }
 
     //leetcode submit region begin(Prohibit modification and deletion)

@@ -12,7 +12,7 @@ import java.util.Deque;
 public class 用两个栈实现队列 {
     public static void main(String[] args) {
         //测试代码
-        Solution solution = new 用两个栈实现队列().new Solution();
+        //Solution solution = new 用两个栈实现队列().new Solution();
     }
 
     //leetcode submit region begin(Prohibit modification and deletion)

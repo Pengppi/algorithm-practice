@@ -6,14 +6,36 @@
  */
 package leetcode.editor.cn;
 
-import javax.swing.tree.TreeNode;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 public class 删点成林 {
     public static void main(String[] args) {
         //测试代码
         Solution solution = new 删点成林().new Solution();
     }
+
+    public class TreeNode {
+        int val;
+        TreeNode left;
+        TreeNode right;
+
+        TreeNode() {
+        }
+
+        TreeNode(int val) {
+            this.val = val;
+        }
+
+        TreeNode(int val, TreeNode left, TreeNode right) {
+            this.val = val;
+            this.left = left;
+            this.right = right;
+        }
+    }
+
     //leetcode submit region begin(Prohibit modification and deletion)
 
     /**

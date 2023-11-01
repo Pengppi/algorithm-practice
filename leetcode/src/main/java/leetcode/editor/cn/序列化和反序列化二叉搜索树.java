@@ -13,7 +13,14 @@ import java.util.List;
 public class 序列化和反序列化二叉搜索树 {
     public static void main(String[] args) {
         //测试代码
-        Solution solution = new 序列化和反序列化二叉搜索树().new Solution();
+        Codec solution = new 序列化和反序列化二叉搜索树().new Codec();
+    }
+
+    public class TreeNode {
+        int val;
+        TreeNode left;
+        TreeNode right;
+        TreeNode(int x) { val = x; }
     }
     //leetcode submit region begin(Prohibit modification and deletion)
 

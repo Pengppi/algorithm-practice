@@ -15,6 +15,11 @@ public class 找出给定方程的正整数解 {
         Solution solution = new 找出给定方程的正整数解().new Solution();
     }
 
+    class CustomFunction {
+        public int f(int x, int y) {
+            return 0;
+        }
+    }
 //力扣代码
 //leetcode submit region begin(Prohibit modification and deletion)
     /*

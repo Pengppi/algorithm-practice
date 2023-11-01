@@ -12,7 +12,7 @@ import java.util.Deque;
 public class 包含min函数的栈 {
     public static void main(String[] args) {
         //测试代码
-        Solution solution = new 包含min函数的栈().new Solution();
+        //MinStack solution = new 包含min函数的栈().new MinStack();
     }
 
     //leetcode submit region begin(Prohibit modification and deletion)

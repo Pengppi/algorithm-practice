@@ -11,6 +11,16 @@ public class 删除链表的节点 {
         //测试代码
         Solution solution = new 删除链表的节点().new Solution();
     }
+
+    public class ListNode {
+        int val;
+        ListNode next;
+
+        ListNode(int x) {
+            val = x;
+        }
+    }
+
     //leetcode submit region begin(Prohibit modification and deletion)
 
     /**

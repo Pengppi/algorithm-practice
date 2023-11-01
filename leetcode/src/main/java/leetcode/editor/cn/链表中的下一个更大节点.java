@@ -8,6 +8,7 @@ package leetcode.editor.cn;
 
 import java.util.ArrayDeque;
 import java.util.Arrays;
+import java.util.Deque;
 
 public class 链表中的下一个更大节点 {
     public static void main(String[] args) {

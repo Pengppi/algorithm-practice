@@ -12,7 +12,7 @@ import java.util.Deque;
 public class 队列的最大值 {
     public static void main(String[] args) {
         //测试代码
-        Solution solution = new 队列的最大值().new Solution();
+//        Solution solution = new 队列的最大值().new Solution();
     }
 
     //leetcode submit region begin(Prohibit modification and deletion)

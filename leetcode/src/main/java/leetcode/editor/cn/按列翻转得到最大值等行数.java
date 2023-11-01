@@ -7,7 +7,7 @@
 package leetcode.editor.cn;
 
 import java.util.HashMap;
-import java.util.HashSet;
+import java.util.Map;
 
 public class 按列翻转得到最大值等行数 {
     public static void main(String[] args) {

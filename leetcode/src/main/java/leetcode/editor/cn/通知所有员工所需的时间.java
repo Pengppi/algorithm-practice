@@ -6,8 +6,8 @@
  */
 package leetcode.editor.cn;
 
-import java.util.Arrays;
-import java.util.Map;
+import java.util.ArrayList;
+import java.util.List;
 
 public class 通知所有员工所需的时间 {
     public static void main(String[] args) {

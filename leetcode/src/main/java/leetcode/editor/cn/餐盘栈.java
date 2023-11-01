@@ -6,13 +6,12 @@
  */
 package leetcode.editor.cn;
 
-import java.util.Deque;
-import java.util.TreeSet;
+import java.util.*;
 
 public class 餐盘栈 {
     public static void main(String[] args) {
         //测试代码
-        Solution solution = new 餐盘栈().new Solution();
+        DinnerPlates solution = new 餐盘栈().new DinnerPlates(0);
     }
 
     //leetcode submit region begin(Prohibit modification and deletion)
@@ -72,7 +71,5 @@ public class 餐盘栈 {
      * int param_3 = obj.popAtStack(index);
      */
     //leetcode submit region end(Prohibit modification and deletion)
-
-}
 
 }

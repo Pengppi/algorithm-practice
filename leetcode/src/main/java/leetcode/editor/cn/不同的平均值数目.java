@@ -6,9 +6,7 @@
  */
 package leetcode.editor.cn;
 
-import java.util.Arrays;
-import java.util.PriorityQueue;
-import java.util.Set;
+import java.util.*;
 
 public class 不同的平均值数目 {
     public static void main(String[] args) {

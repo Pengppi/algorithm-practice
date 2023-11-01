@@ -11,6 +11,16 @@ public class 二叉树的镜像 {
         //测试代码
         Solution solution = new 二叉树的镜像().new Solution();
     }
+
+    public class TreeNode {
+        int val;
+        TreeNode left;
+        TreeNode right;
+
+        TreeNode(int x) {
+            val = x;
+        }
+    }
     //leetcode submit region begin(Prohibit modification and deletion)
 
     /**

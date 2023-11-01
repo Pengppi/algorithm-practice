@@ -6,6 +6,9 @@
  */
 package leetcode.editor.cn;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class 数组中重复的数字 {
     public static void main(String[] args) {
         //测试代码

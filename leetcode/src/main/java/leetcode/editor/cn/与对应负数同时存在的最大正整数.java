@@ -7,8 +7,7 @@
 package leetcode.editor.cn;
 
 import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.Map;
+import java.util.List;
 
 public class 与对应负数同时存在的最大正整数 {
     public static void main(String[] args) {

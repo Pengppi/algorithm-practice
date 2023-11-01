@@ -13,7 +13,7 @@ import java.util.TreeMap;
 public class 股票价格波动 {
     public static void main(String[] args) {
         //测试代码
-        Solution solution = new 股票价格波动().new Solution();
+        //Solution solution = new 股票价格波动().new Solution();
     }
 
     //leetcode submit region begin(Prohibit modification and deletion)

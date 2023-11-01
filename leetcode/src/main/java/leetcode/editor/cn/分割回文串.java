@@ -6,6 +6,9 @@
  */
 package leetcode.editor.cn;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class 分割回文串 {
     public static void main(String[] args) {
         //测试代码

@@ -9,7 +9,7 @@ package leetcode.editor.cn;
 public class 树节点的第K个祖先 {
     public static void main(String[] args) {
         //测试代码
-        Solution solution = new 树节点的第K个祖先().new Solution();
+        //Solution solution = new 树节点的第K个祖先().new Solution();
     }
 
     //leetcode submit region begin(Prohibit modification and deletion)
@@ -22,7 +22,7 @@ public class 树节点的第K个祖先 {
             for (int i = 0; i < n; i++) {
                 pa[i][0] = parent[i];
             }
-            for (int i = 0; i < m-1; i++) {
+            for (int i = 0; i < m - 1; i++) {
                 for (int x = 0; x < n; x++) {
                     int p = pa[x][i];
                     pa[x][i + 1] = p == -1 ? -1 : pa[p][i];

@@ -11,7 +11,7 @@ import java.util.*;
 public class 子数组中占绝大多数的元素 {
     public static void main(String[] args) {
         //测试代码
-        MajorityChecker solution = new 子数组中占绝大多数的元素().new MajorityChecker();
+//        MajorityChecker solution = new 子数组中占绝大多数的元素().new MajorityChecker();
     }
 
     //leetcode submit region begin(Prohibit modification and deletion)

@@ -6,8 +6,8 @@
  */
 package leetcode.editor.cn;
 
-import java.util.ArrayDeque;
-import java.util.Deque;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.PriorityQueue;
 
 public class 滑动窗口最大值{

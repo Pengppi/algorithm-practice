@@ -11,6 +11,15 @@ public class 从尾到头打印链表 {
         //测试代码
         Solution solution = new 从尾到头打印链表().new Solution();
     }
+
+    public class ListNode {
+        int val;
+        ListNode next;
+
+        ListNode(int x) {
+            val = x;
+        }
+    }
     //leetcode submit region begin(Prohibit modification and deletion)
 
     /**

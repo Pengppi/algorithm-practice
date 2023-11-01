@@ -43,7 +43,7 @@ public class 推箱子 {
             q.offer(new int[]{f(si, sj), f(bi, bj), 0});
             vis[f(si, sj)][f(bi, bj)] = true;
             while (!q.isEmpty()) {
-                var p = q.poll();
+                int[] p = q.poll();
                 int d = p[2];
                 bi = p[1] / n;
                 bj = p[1] % n;
