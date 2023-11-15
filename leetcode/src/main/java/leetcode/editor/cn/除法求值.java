@@ -45,10 +45,8 @@ public class 除法求值 {
                     continue;
                 }
                 int a = stringToInt.get(q.get(0)), b = stringToInt.get(q.get(1));
-                if (g[a][b] == 0) {
-                    if (dfs(g, a, b, new boolean[n]) == 0) {
-                        continue;
-                    }
+                if (g[a][b] == 0 && dfs(g, a, b, new boolean[n]) == 0) {
+                    continue;
                 }
                 ans[i] = g[a][b];
             }
