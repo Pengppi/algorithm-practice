@@ -5,79 +5,95 @@
  * @Date: 2023-11-12 12:10:44
  */
 package leetcode.editor.cn;
-public class Range模块{
-public static void main(String[] args) {
+
+public class Range模块 {
+    public static void main(String[] args) {
         //测试代码
         //Solution solution = new Range模块().new Solution();
     }
+
     //leetcode submit region begin(Prohibit modification and deletion)
-class RangeModule {
+    class RangeModule {
 
-    public RangeModule() {
+        class Node {
+            Node left, right;
+            boolean cover;
+            int tag;
+        }
 
-    }
+        private Node root;
+        private int N = (int) 1e+9;
+
+        private void update(Node o, int s, int e, int l, int r, boolean flg) {
+            if (l <= s && e <= r) {
+                o.cover = flg;
+                o.tag = flg ? 1 : 0;
+                return;
+            }
+            int m = (s + e) / 2;
+            pushDown(o);
+            if (l <= m) {
+                update(o.left, s, m, l, r, flg);
+            }
+            if (r > m) {
+                update(o.right, m + 1, e, l, r, flg);
+            }
+            pushUp(o);
+        }
+
+        private boolean query(Node o, int s, int e, int l, int r) {
+            if (l <= s && e <= r) {
+                return o.cover;
+            }
+            int m = (s + e) / 2;
+            pushDown(o);
+            boolean ans = true;
+            if (l <= m) {
+                ans &= query(o.left, s, m, l, r);
+            }
+            if (r > m) {
+                ans &= query(o.right, m + 1, e, l, r);
+            }
+            return ans;
+        }
+
+        private void pushDown(Node o) {
+            if (o.left == null) {
+                o.left = new Node();
+            }
+            if (o.right == null) {
+                o.right = new Node();
+            }
+            if (o.tag == 0) {
+                return;
+            }
+            o.left.cover = o.tag == 1;
+            o.right.cover = o.tag == 1;
+            o.left.tag = o.tag;
+            o.right.tag = o.tag;
+            o.tag = 0;
+        }
+
+        private void pushUp(Node o) {
+            o.cover = o.left.cover & o.right.cover;
+        }
+
+        public RangeModule() {
+            root = new Node();
+        }
 
         public void addRange(int left, int right) {
-            // 1 表示覆盖；-1 表示取消覆盖
-            update(root, 1, N, left, right - 1, 1);
+            update(root, 0, N, left, right - 1, true);
         }
 
         public boolean queryRange(int left, int right) {
-            return query(root, 1, N, left, right - 1);
+            return query(root, 0, N, left, right - 1);
         }
 
         public void removeRange(int left, int right) {
-            // 1 表示覆盖；-1 表示取消覆盖
-            update(root, 1, N, left, right - 1, -1);
+            update(root, 0, N, left, right - 1, false);
         }
-
-        // *************** 下面是模版 ***************
-        class Node {
-            Node left, right;
-            // 表示当前区间是否被覆盖
-            boolean cover;
-            int add;
-        }
-        private int N = (int) 1e9;
-        private Node root = new Node();
-        public void update(Node node, int start, int end, int l, int r, int val) {
-            if (l <= start && end <= r) {
-                // 1 表示覆盖；-1 表示取消覆盖
-                node.cover = val == 1;
-                node.add = val;
-                return ;
-            }
-            int mid = (start + end) >> 1;
-            pushDown(node, mid - start + 1, end - mid);
-            if (l <= mid) update(node.left, start, mid, l, r, val);
-            if (r > mid) update(node.right, mid + 1, end, l, r, val);
-            pushUp(node);
-        }
-        public boolean query(Node node, int start, int end, int l, int r) {
-            if (l <= start && end <= r) return node.cover;
-            int mid = (start + end) >> 1;
-            pushDown(node, mid - start + 1, end - mid);
-            // 查询左右子树是否被覆盖
-            boolean ans = true;
-            if (l <= mid) ans = ans && query(node.left, start, mid, l, r);
-            if (r > mid) ans = ans && query(node.right, mid + 1, end, l, r);
-            return ans;
-        }
-        private void pushUp(Node node) {
-            // 向上更新
-            node.cover = node.left.cover && node.right.cover;
-        }
-        private void pushDown(Node node, int leftNum, int rightNum) {
-            if (node.left == null) node.left = new Node();
-            if (node.right == null) node.right = new Node();
-            if (node.add == 0) return ;
-            node.left.cover = node.add == 1;
-            node.right.cover = node.add == 1;
-            node.left.add = node.add;
-            node.right.add = node.add;
-            node.add = 0;
-        }
-}
+    }
 
 /**
  * Your RangeModule object will be instantiated and called as such:
