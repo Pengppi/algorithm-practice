@@ -16,13 +16,13 @@ public class 使用最小花费爬楼梯 {
     class Solution {
         public int minCostClimbingStairs(int[] cost) {
             int n = cost.length;
-            int[] f = new int[n];
-            f[0] = cost[0];
-            f[1] = cost[1];
+            int f1 = cost[0], f2 = cost[1];
             for (int i = 2; i < n; i++) {
-                f[i] = Math.min(f[i - 2], f[i - 1]) + cost[i];
+                int f3 = Math.min(f1, f2) + cost[i];
+                f1 = f2;
+                f2 = f3;
             }
-            return Math.min(f[n - 1], f[n - 2]);
+            return Math.min(f1, f2);
         }
     }
 //leetcode submit region end(Prohibit modification and deletion)
