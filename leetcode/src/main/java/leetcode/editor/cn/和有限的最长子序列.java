@@ -6,7 +6,6 @@
  */
 package leetcode.editor.cn;
 
-import jdk.nashorn.internal.runtime.FindProperty;
 
 import java.util.Arrays;
 
