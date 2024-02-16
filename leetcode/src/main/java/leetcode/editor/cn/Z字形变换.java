@@ -6,49 +6,47 @@
  */
 package leetcode.editor.cn;
 
+import java.util.Arrays;
+
 public class Z字形变换 {
     public static void main(String[] args) {
-        //测试代码
+        // 测试代码
         Solution solution = new Z字形变换().new Solution();
     }
-
-    //力扣代码
-//leetcode submit region begin(Prohibit modification and deletion)
+    
+    // 力扣代码
+// leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
         public String convert(String s, int numRows) {
             if (numRows == 1) {
                 return s;
             }
-            String[] strs = new String[numRows];
-            for (int i = 0; i < numRows; i++) {
-                strs[i] = "";
-            }
+            StringBuilder[] strs = new StringBuilder[numRows];
+            Arrays.setAll(strs, i -> new StringBuilder());
+            StringBuilder ans = new StringBuilder();
+            boolean down = true;
             int i = 0;
-            boolean up = true;
-            for (char c : s.toCharArray()) {
-                strs[i] += c;
-                if (up) {
-                    i++;
-                    if (i == numRows) {
-                        up = false;
+            for (final char c : s.toCharArray()) {
+                strs[i].append(c);
+                if (down) {
+                    if (++i == numRows) {
+                        down = false;
                         i = numRows - 2;
                     }
                 } else {
-                    i--;
-                    if (i == -1) {
-                        up = true;
+                    if (--i == -1) {
+                        down = true;
                         i = 1;
                     }
                 }
             }
-            String ans = "";
-            for (String str : strs) {
-                ans += str;
+            for (final StringBuilder str : strs) {
+                ans.append(str);
             }
-            return ans;
+            return ans.toString();
         }
     }
 
-//leetcode submit region end(Prohibit modification and deletion)
+// leetcode submit region end(Prohibit modification and deletion)
 
 }
