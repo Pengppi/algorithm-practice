@@ -1,18 +1,18 @@
 /**
- * @Title: 589.N 叉树的前序遍历
- * @TitleSlug: nAryTreePreorderTraversal
+ * @Title: 590.N 叉树的后序遍历
+ * @TitleSlug: nAryTreePostorderTraversal
  * @Author: Neo
- * @Date: 2024-02-18 09:29:14
+ * @Date: 2024-02-19 09:25:48
  */
 package leetcode.editor.cn;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class N叉树的前序遍历 {
+public class N叉树的后序遍历 {
     public static void main(String[] args) {
         // 测试代码
-        // Solution solution = new N叉树的前序遍历().new Solution();
+        // Solution solution = new N叉树的后序遍历().new Solution();
     }
     // leetcode submit region begin(Prohibit modification and deletion)
 /*
@@ -35,23 +35,24 @@ class Node {
 */
     
     class Solution {
-        public List<Integer> preorder(Node root) {
+        public List<Integer> postorder(Node root) {
             List<Integer> ans = new ArrayList<>();
-            dfs(root, ans);
+            postorder(root, ans);
             return ans;
         }
         
-        private void dfs(final Node node, final List<Integer> ans) {
+        private void postorder(final Node node, final List<Integer> ans) {
             if (node == null) {
                 return;
             }
-            ans.add(node.val);
             if (node.children != null) {
-                for (Node child : node.children) {
-                    dfs(child, ans);
+                for (final Node child : node.children) {
+                    postorder(child, ans);
                 }
             }
+            ans.add(node.val);
         }
+        
     }
     
     // leetcode submit region end(Prohibit modification and deletion)
