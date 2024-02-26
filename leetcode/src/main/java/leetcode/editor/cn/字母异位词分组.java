@@ -23,13 +23,7 @@ public class 字母异位词分组 {
                 var chars = s.toCharArray();
                 Arrays.sort(chars);
                 String key = new String(chars);
-                if (map.containsKey(key)) {
-                    map.get(key).add(s);
-                } else {
-                    List<String> list = new ArrayList<>();
-                    list.add(s);
-                    map.put(key, list);
-                }
+                map.computeIfAbsent(key, k -> new ArrayList<>()).add(s);
             }
             ans.addAll(map.values());
             return ans;
