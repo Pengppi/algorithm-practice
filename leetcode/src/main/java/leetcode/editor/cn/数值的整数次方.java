@@ -15,7 +15,7 @@ public class 数值的整数次方 {
     //leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
         public double myPow(double x, int n) {
-            double res = 1;
+            double res = 1.0;
             long m = n;
             if (m < 0) {
                 x = 1 / x;
