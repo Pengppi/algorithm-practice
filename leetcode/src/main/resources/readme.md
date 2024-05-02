@@ -11,49 +11,25 @@
  * @Date: $!velocityTool.date()
  */
 package leetcode.editor.cn;
-public class $!velocityTool.camelCaseName(${question.title}){
+public class $!velocityTool.camelCaseName(${question.title})$!velocityTool.smallCamelCaseName(${question.titleSlug}){
 public static void main(String[] args) {
         //测试代码
-        Solution solution = new $!velocityTool.camelCaseName(${question.title})().new Solution();
+        //Solution solution = new $!velocityTool.camelCaseName(${question.title})$!velocityTool.smallCamelCaseName(${question.titleSlug})().new Solution();
     }
     ${question.code}
 }
-        
-        
+       
 ```
 
-```java
-/**
- * @Title: ${question.frontendQuestionId}.${question.title}
- * @TitleSlug: $!velocityTool.smallCamelCaseName(${question.titleSlug})
- * @Author: Neo
- * @Date: $!velocityTool.date()
- */
-package leetcode.editor.cn;
+```python
+"""
+Title: ${question.frontendQuestionId}.${question.title}
+Title Slug: $!velocityTool.smallCamelCaseName(${question.titleSlug})
+Author: Neo
+Date: $!velocityTool.date()
+"""
 
-public class $!velocityTool.
-
-camelCaseName($ {
-    question.title
-})$!velocityTool.
-
-smallCamelCaseName($ {
-    question.titleSlug
-}){
-
-public static void main(String[] args) {
-    //测试代码
-    Solution solution = new $ !velocityTool.camelCaseName($ {
-        question.title
-    })$ !velocityTool.smallCamelCaseName($ {
-        question.titleSlug
-    })().new Solution();
-}
-
-$ {
-    question.code
-}
-}
+${question.code}
 
 ```
 
