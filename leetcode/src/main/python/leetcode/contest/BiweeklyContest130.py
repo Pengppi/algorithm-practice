@@ -30,7 +30,6 @@ class Solution:
                 cnt = 0
                 break
             s_set.add(s[i])
-            print(i)
         return ans + cnt
 
     def satisfiesConditions(self, grid: List[List[int]]) -> bool:
