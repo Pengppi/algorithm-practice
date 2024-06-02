@@ -1,6 +1,6 @@
 
 ## Code FileName
-``$!velocityTool.camelCaseName(${question.title})``
+``$!velocityTool.camelCaseName(${question.title})$!velocityTool.smallCamelCaseName(${question.titleSlug})``
 
 ## Code Template
 ```java
