@@ -1,0 +1,19 @@
+    class Solution {
+        public int[] nextGreaterElements(int[] nums) {
+            int n = nums.length;
+            int ans[] = new int[n];
+            Arrays.fill(ans, -1);
+            Deque<Integer> d = new LinkedList<>();
+            for (int i = 0; i < n * 2 - 1; i++) {
+                while (!d.isEmpty() && nums[i % n] > nums[d.peekFirst()]) {
+                    int pre = d.pollFirst();
+                    ans[pre] = nums[i%n];
+                }
+                d.addFirst(i % n);
+            }
+            return ans;
+        }
+    }
+
+//runtime:5 ms
+//memory:42.5 MB
