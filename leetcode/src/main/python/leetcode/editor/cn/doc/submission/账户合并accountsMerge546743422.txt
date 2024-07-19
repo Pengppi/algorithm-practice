@@ -1,0 +1,31 @@
+class Solution:
+    def accountsMerge(self, accounts: List[List[str]]) -> List[List[str]]:
+        user_map = dict()
+        email_map = dict()
+        email_sets = list()
+        for account in accounts:
+            cur_email = set(account[1:])
+            id = len(email_sets)
+            for email in cur_email:
+                if email in email_map:
+                    id = email_map[email]
+                    break
+            email_map.update({email: id for email in cur_email})
+            if id == len(email_sets):
+                email_sets.append(cur_email)
+                user_map[id] = account[0]
+            else:
+                email_sets[id] = email_sets[id].union(cur_email)
+
+        ans = []
+        for i, st in enumerate(email_sets):
+            name = user_map[i]
+            ans.append([name] + sorted(st))
+        return ans
+
+# total_testcases:50
+# total_correct:25
+# input_formatted:[["David","David0@m.co","David1@m.co"],["David","David3@m.co","David4@m.co"],["David","David4@m.co","David5@m.co"],["David","David2@m.co","David3@m.co"],["David","David1@m.co","David2@m.co"]]
+# expected_output:[["David","David0@m.co","David1@m.co","David2@m.co","David3@m.co","David4@m.co","David5@m.co"]]
+# code_output:[["David","David0@m.co","David1@m.co","David2@m.co"],["David","David2@m.co","David3@m.co","David4@m.co","David5@m.co"]]
+# last_testcase:[["David","David0@m.co","David1@m.co"],["David","David3@m.co","David4@m.co"],["David","David4@m.co","David5@m.co"],["David","David2@m.co","David3@m.co"],["David","David1@m.co","David2@m.co"]]

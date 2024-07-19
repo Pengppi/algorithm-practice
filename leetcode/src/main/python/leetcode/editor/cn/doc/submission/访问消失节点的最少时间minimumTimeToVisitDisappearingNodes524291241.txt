@@ -1,0 +1,38 @@
+    class Solution {
+        public int[] minimumTime(int n, int[][] edges, int[] disappear) {
+            List<int[]>[] g = new List[n];
+            Arrays.setAll(g, e -> new ArrayList<>());
+            for (int[] e : edges) {
+                int x = e[0], y = e[1], wt = e[2];
+                g[x].add(new int[]{y, wt});
+                g[y].add(new int[]{x, wt});
+            }
+            
+            int[] dis = new int[n];
+            Arrays.fill(dis, -1);
+            dis[0] = 0;
+            
+            PriorityQueue<int[]> pq = new PriorityQueue<>((a, b) -> a[1] - b[1]);
+            pq.offer(new int[]{0, 0});
+            
+            while (!pq.isEmpty()) {
+                int[] p = pq.poll();
+                int x = p[0], dx = p[1];
+                if (dx > dis[x]) {
+                    continue;
+                }
+                for (int[] q : g[x]) {
+                    int y = q[0], dy = q[1] + dx;
+                    if (dy < disappear[y] && (dis[y] == -1 || dy < dis[y])) {
+                        dis[y] = dy;
+                        pq.offer(new int[]{y, dy});
+                    }
+                }
+            }
+            return dis;
+            
+        }
+    }
+
+//runtime:44 ms
+//memory:104.8 MB
