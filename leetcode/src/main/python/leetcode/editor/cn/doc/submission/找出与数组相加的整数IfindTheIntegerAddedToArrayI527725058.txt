@@ -1,0 +1,9 @@
+class Solution {
+    public int addedInteger(int[] nums1, int[] nums2) {
+                int mx1 = Arrays.stream(nums1).max().getAsInt();
+        int mx2 = Arrays.stream(nums2).max().getAsInt();
+        return mx2 - mx1;
+    }
+}
+//runtime:2 ms
+//memory:42.2 MB
