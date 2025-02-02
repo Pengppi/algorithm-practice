@@ -1,0 +1,19 @@
+    class Solution {
+        public int jump(int[] nums) {
+            int n = nums.length;
+            int[] f = new int[n + 1];
+            Arrays.fill(f, Integer.MAX_VALUE);
+            f[0] = 0;
+            for (int i = 1; i < n; i++) {
+                for (int j = 0; j < i; j++) {
+                    if (j + nums[j] >= i) {
+                        f[i] = Math.min(f[i], f[j] + 1);
+                    }
+                }
+            }
+            return f[n - 1];
+        }
+    }
+
+//runtime:313 ms
+//memory:44.6 MB
