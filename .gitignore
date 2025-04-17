@@ -38,3 +38,4 @@ log/
 temp/
 test/
 trifles/
+.DS_Store
