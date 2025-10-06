@@ -13,30 +13,38 @@ class Solution:
     def countSubgraphsForEachDiameter(self, n: int, edges: List[List[int]]) -> List[int]:
         g = [[] for _ in range(n + 1)]
         for u, v in edges:
-            g[u].append(v)
-            g[v].append(u)
+            g[u - 1].append(v - 1)
+            g[v - 1].append(u - 1)
 
-        @cache
-        def dfs(x: int, fa: int, dist: int) -> set[int]:
-            cur = 1 << x
-            if dist == 0:
-                return {cur}
-            res = set()
-            for y in g[x]:
-                if y == fa:
-                    continue
-                res |= dfs(y, x, dist - 1)
+        ans = [0] * (n - 1)
 
-            return {s | cur for s in res}
+        for mask in range(3, 1 << n):
+            if (mask & (mask - 1)) == 0:
+                continue
 
-        result = []
-        for d in range(1, n):
-            total_sets = set()
-            for x in range(1, n + 1):
-                sets = dfs(x, 0, d)
-                total_sets |= sets
-            result.append(len(total_sets))
-        return result
+            vis = 0
+            diameter = 0
+
+            def dfs(x: int):
+                nonlocal vis, diameter
+                vis |= 1 << x
+                mx_len = 0
+
+                for y in g[x]:
+                    yy = 1 << y
+                    if (vis & yy) != 0 or (mask & yy) == 0:
+                        continue
+                    cur_len = dfs(y) + 1
+                    diameter = max(diameter, mx_len + cur_len)
+                    mx_len = max(mx_len, cur_len)
+
+                return mx_len
+
+            dfs(mask.bit_length() - 1)
+            if vis == mask:
+                ans[diameter - 1] += 1
+
+        return ans
 
 
 # leetcode submit region end(Prohibit modification and deletion)
