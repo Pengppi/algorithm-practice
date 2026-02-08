@@ -5,11 +5,9 @@ Author: Neo
 Date: 2026-01-28 09:51:49
 """
 
-from functools import cache
 from math import inf
 from typing import List
 
-from sortedcontainers.sorteddict import SortedDict
 
 
 # leetcode submit region begin(Prohibit modification and deletion)
@@ -33,7 +31,7 @@ class Solution:
             for i in range(mx, -1, -1):
                 suf_min_f[i] = min(suf_min_f[i + 1], min_f[i])
 
-        return f[n]
+        return f[n]  # pyright: ignore
 
 
 # leetcode submit region end(Prohibit modification and deletion)
