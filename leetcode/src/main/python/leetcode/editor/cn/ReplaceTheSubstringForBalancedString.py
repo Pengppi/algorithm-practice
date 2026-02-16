@@ -4,6 +4,8 @@ Title Slug: replaceTheSubstringForBalancedString
 Author: Neo
 Date: 2026-01-11 15:09:24
 """
+from cmath import inf
+from collections import Counter
 
 
 # leetcode submit region begin(Prohibit modification and deletion)
