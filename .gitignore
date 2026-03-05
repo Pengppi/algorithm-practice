@@ -39,3 +39,4 @@ temp/
 test/
 trifles/
 .DS_Store
+*.pyc
